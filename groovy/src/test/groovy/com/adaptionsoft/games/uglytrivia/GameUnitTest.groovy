@@ -33,4 +33,15 @@ class GameUnitTest extends GroovyTestCase {
 		game.wasCorrectlyAnswered()
 		assert !game.currentPlayer.inPenaltyBox
 	}
+
+	void testFailedPenalty() {
+		def game = new Game()
+		game.add('Dummy')
+		game.roll(1)
+		game.wrongAnswer()
+		assert game.currentPlayer.inPenaltyBox
+		game.roll(2)
+		game.wasCorrectlyAnswered()
+		assert game.currentPlayer.inPenaltyBox
+	}
 }
