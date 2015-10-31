@@ -32,10 +32,12 @@ public class GameRunner {
 		while (!gameIsWon) {
 			aGame.roll(provider.firstRoll)
 			if (provider.secondRoll == 7) {
-				gameIsWon = aGame.wrongAnswer()
+				aGame.wrongAnswer()
 			} else {
-				gameIsWon = aGame.wasCorrectlyAnswered()
+				aGame.wasCorrectlyAnswered()
 			}
+			gameIsWon = aGame.didPlayerWin()
+			aGame.nextPlayer()
 		}
 	}
 }

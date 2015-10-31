@@ -80,38 +80,27 @@ public class Game {
 		}
 	}
 
-	public boolean wasCorrectlyAnswered() {
+	public void wasCorrectlyAnswered() {
 		if (currentPlayer.inPenaltyBox) {
 			if (isGettingOutOfPenaltyBox) {
 				println "Answer was correct!!!!"
 				currentPlayer.awardCoin()
     			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
-				def winner = didPlayerWin()
-				nextPlayer()
-				return winner
-			} else {
-				nextPlayer()
-				return false
 			}
 		} else {
 			println "Answer was corrent!!!!"
 			currentPlayer.awardCoin()
 			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
-			def winner = didPlayerWin()
-			nextPlayer()
-			return winner
 		}
 	}
 	
-	public boolean wrongAnswer(){
+	public void wrongAnswer(){
 		println "Question was incorrectly answered"
 		println currentPlayer.name + " was sent to the penalty box"
 		currentPlayer.inPenaltyBox = true
-		nextPlayer()
-		return false
 	}
 
-	private void nextPlayer() {
+	public void nextPlayer() {
 		players.add(players.remove(0))
 	}
 
@@ -119,7 +108,7 @@ public class Game {
 		players[0]
 	}
 
-	private boolean didPlayerWin() {
+	public boolean didPlayerWin() {
 		currentPlayer.isWinner()
 	}
 }
