@@ -2,6 +2,8 @@ package com.adaptionsoft.games.uglytrivia
 
 public class Game {
 
+	private ResourceBundle messages
+
 	private List<Player> players = []
 	boolean isGettingOutOfPenaltyBox
 
@@ -10,13 +12,22 @@ public class Game {
 	def sportsQuestions = new LinkedList()
 	def rockQuestions = new LinkedList()
 
-	public Game() {
+	Game() {
+		initGame(Locale.default)
+	}
+
+	Game(Locale locale) {
+		initGame(locale)
+	}
+
+	private void initGame(Locale locale) {
+		messages = ResourceBundle.getBundle('TriviaBundle', locale)
 		50.times {
-			def i ->
-				popQuestions.addLast(createQuestion('Pop Question', i))
-				scienceQuestions.addLast(createQuestion('Science Question', i))
-				sportsQuestions.addLast(createQuestion('Sports Question', i))
-				rockQuestions.addLast(createQuestion('Rock Question', i))
+			i ->
+				popQuestions.addLast(createQuestion(messages.getString('popCategory'), i))
+				scienceQuestions.addLast(createQuestion(messages.getString('scienceCategory'), i))
+				sportsQuestions.addLast(createQuestion(messages.getString('sportsCategory'), i))
+				rockQuestions.addLast(createQuestion(messages.getString('rockCategory'), i))
 		}
 	}
 
