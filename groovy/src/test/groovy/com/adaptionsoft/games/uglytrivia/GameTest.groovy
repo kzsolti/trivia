@@ -25,13 +25,13 @@ class GameTest extends GroovyTestCase {
 	void testGenerateOutputs() {
 		100.times {
 			//println new File("test.txt").absolutePath
-			new File("src/main/resources/input/input_${it}.txt").withReader {
+			new File("src/test/resources/input/input_${it}.txt").withReader {
 				reader ->
 					def game = new Game()
 					game.add("Chet")
 					game.add("Pat")
 					game.add("Sue")
-					new File("src/main/resources/output/output_${it}.txt").withWriter {
+					new File("src/test/resources/output/output_${it}.txt").withWriter {
 						def writer ->
 							def interceptor = new SystemOutputInterceptor({
 								def output ->
@@ -63,14 +63,14 @@ class GameTest extends GroovyTestCase {
 
 	void testBlackBox() {
 		100.times {
-			new File("src/main/resources/input/input_${it}.txt").withReader {
+			new File("src/test/resources/input/input_${it}.txt").withReader {
 				reader ->
 					def game = new Game()
 					game.add("Chet")
 					game.add("Pat")
 					game.add("Sue")
 					def log = new StringBuffer()
-					def outFile = new File("src/main/resources/output/output_${it}.txt")
+					def outFile = new File("src/test/resources/output/output_${it}.txt")
 					def interceptor = new SystemOutputInterceptor({
 						def output ->
 							log.append(output)
