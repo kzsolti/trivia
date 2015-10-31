@@ -3,7 +3,6 @@ package com.adaptionsoft.games.uglytrivia
 public class Game {
 
 	private List<Player> players = []
-	int currentPlayer = 0
 	boolean isGettingOutOfPenaltyBox
 
 	def popQuestions = new LinkedList()
@@ -32,17 +31,17 @@ public class Game {
 	}
 
 	public void roll(int roll) {
-		println players.get(currentPlayer).name + " is the current player"
+		println currentPlayer.name + " is the current player"
 		println "They have rolled a " + roll
 		
-		if (players.get(currentPlayer).inPenaltyBox) {
+		if (currentPlayer.inPenaltyBox) {
 			if (roll % 2 != 0) {
 				isGettingOutOfPenaltyBox = true
-				println players.get(currentPlayer).name + " is getting out of the penalty box"
+				println currentPlayer.name + " is getting out of the penalty box"
 				movePlayer(roll)
 				askQuestion()
 			} else {
-				println players.get(currentPlayer).name + " is not getting out of the penalty box"
+				println currentPlayer.name + " is not getting out of the penalty box"
 				isGettingOutOfPenaltyBox = false
 			}
 		} else {
@@ -52,8 +51,8 @@ public class Game {
 	}
 
 	private void movePlayer(int roll) {
-		players.get(currentPlayer).advance(roll)
-		println "${players.get(currentPlayer).name}'s new location is ${players.get(currentPlayer).place}"
+		currentPlayer.advance(roll)
+		println "${currentPlayer.name}'s new location is ${currentPlayer.place}"
 		println "The category is " + currentCategory()
 	}
 
@@ -69,7 +68,7 @@ public class Game {
 	}
 
 	private String currentCategory() {
-		switch (players.get(currentPlayer).place % 4) {
+		switch (currentPlayer.place % 4) {
 			case 0:
 				return 'Pop'
 			case 1:
@@ -82,11 +81,11 @@ public class Game {
 	}
 
 	public boolean wasCorrectlyAnswered() {
-		if (players.get(currentPlayer).inPenaltyBox) {
+		if (currentPlayer.inPenaltyBox) {
 			if (isGettingOutOfPenaltyBox) {
 				println "Answer was correct!!!!"
-				players.get(currentPlayer).awardCoin()
-    			println "${players.get(currentPlayer).name} now has ${players.get(currentPlayer).purse} Gold Coins."
+				currentPlayer.awardCoin()
+    			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
 				def winner = didPlayerWin()
 				nextPlayer()
 				return winner
@@ -96,8 +95,8 @@ public class Game {
 			}
 		} else {
 			println "Answer was corrent!!!!"
-			players.get(currentPlayer).awardCoin()
-			println "${players.get(currentPlayer).name} now has ${players.get(currentPlayer).purse} Gold Coins."
+			currentPlayer.awardCoin()
+			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
 			def winner = didPlayerWin()
 			nextPlayer()
 			return winner
@@ -106,18 +105,21 @@ public class Game {
 	
 	public boolean wrongAnswer(){
 		println "Question was incorrectly answered"
-		println players.get(currentPlayer).name + " was sent to the penalty box"
-		players.get(currentPlayer).inPenaltyBox = true
+		println currentPlayer.name + " was sent to the penalty box"
+		currentPlayer.inPenaltyBox = true
 		nextPlayer()
 		return true
 	}
 
 	private void nextPlayer() {
-		currentPlayer++
-		if (currentPlayer == players.size()) currentPlayer = 0
+		players.add(players.remove(0))
+	}
+
+	private Player getCurrentPlayer() {
+		players[0]
 	}
 
 	private boolean didPlayerWin() {
-		!players.get(currentPlayer).isWinner()
+		!currentPlayer.isWinner()
 	}
 }
