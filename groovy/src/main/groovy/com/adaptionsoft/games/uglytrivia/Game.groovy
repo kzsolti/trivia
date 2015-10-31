@@ -88,7 +88,7 @@ public class Game {
     			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
 			}
 		} else {
-			println "Answer was corrent!!!!"
+			println "Answer was correct!!!!"
 			currentPlayer.awardCoin()
 			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
 		}
