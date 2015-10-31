@@ -4,8 +4,6 @@ import com.adaptionsoft.games.uglytrivia.Game
 
 public class GameRunner {
 
-	private static boolean notAWinner
-
 	public static void main(String[] args) {
 	    	    
 		Game aGame = new Game()
@@ -30,19 +28,14 @@ public class GameRunner {
 	}
 
 	public static void runGame(Game aGame, RollProvider provider) {
-		boolean isFirstRound = true
-		notAWinner = false
-		while (isFirstRound || notAWinner) {
-
+		boolean gameIsWon = false
+		while (!gameIsWon) {
 			aGame.roll(provider.firstRoll)
-
 			if (provider.secondRoll == 7) {
-				notAWinner = aGame.wrongAnswer()
+				gameIsWon = aGame.wrongAnswer()
 			} else {
-				notAWinner = aGame.wasCorrectlyAnswered()
+				gameIsWon = aGame.wasCorrectlyAnswered()
 			}
-
-			isFirstRound = false
 		}
 	}
 }

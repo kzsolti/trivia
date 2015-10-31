@@ -91,7 +91,7 @@ public class Game {
 				return winner
 			} else {
 				nextPlayer()
-				return true
+				return false
 			}
 		} else {
 			println "Answer was corrent!!!!"
@@ -108,7 +108,7 @@ public class Game {
 		println currentPlayer.name + " was sent to the penalty box"
 		currentPlayer.inPenaltyBox = true
 		nextPlayer()
-		return true
+		return false
 	}
 
 	private void nextPlayer() {
@@ -120,6 +120,6 @@ public class Game {
 	}
 
 	private boolean didPlayerWin() {
-		!currentPlayer.isWinner()
+		currentPlayer.isWinner()
 	}
 }
