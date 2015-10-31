@@ -46,12 +46,12 @@ class GameTest extends GroovyTestCase {
 								@Override
 								int getFirstRoll() {
 									rolls = reader.readLine().split(',')
-									rolls[0]
+									rolls[0].toInteger()
 								}
 
 								@Override
 								int getSecondRoll() {
-									rolls[1]
+									rolls[1].toInteger()
 								}
 							})
 							interceptor.stop()
@@ -84,12 +84,12 @@ class GameTest extends GroovyTestCase {
 						@Override
 						int getFirstRoll() {
 							rolls = reader.readLine().split(',')
-							rolls[0]
+							rolls[0].toInteger()
 						}
 
 						@Override
 						int getSecondRoll() {
-							rolls[1]
+							rolls[1].toInteger()
 						}
 					})
 					interceptor.stop()

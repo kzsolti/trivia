@@ -1,112 +1,112 @@
 Chet is the current player
-They have rolled a 53
-Chet's new location is 41
-The category is Rock
-Rock Question 0
+They have rolled a 5
+Chet's new location is 5
+The category is Science
+Science Question 0
 Answer was corrent!!!!
 Chet now has 1 Gold Coins.
 Pat is the current player
-They have rolled a 50
-Pat's new location is 38
-The category is Rock
-Rock Question 1
+They have rolled a 2
+Pat's new location is 2
+The category is Sports
+Sports Question 0
 Answer was corrent!!!!
 Pat now has 1 Gold Coins.
 Sue is the current player
-They have rolled a 50
-Sue's new location is 38
-The category is Rock
-Rock Question 2
+They have rolled a 2
+Sue's new location is 2
+The category is Sports
+Sports Question 1
 Answer was corrent!!!!
 Sue now has 1 Gold Coins.
 Chet is the current player
-They have rolled a 49
-Chet's new location is 78
-The category is Rock
-Rock Question 3
+They have rolled a 1
+Chet's new location is 6
+The category is Sports
+Sports Question 2
 Answer was corrent!!!!
 Chet now has 2 Gold Coins.
 Pat is the current player
-They have rolled a 50
-Pat's new location is 76
-The category is Rock
-Rock Question 4
+They have rolled a 2
+Pat's new location is 4
+The category is Pop
+Pop Question 0
 Answer was corrent!!!!
 Pat now has 2 Gold Coins.
 Sue is the current player
-They have rolled a 49
-Sue's new location is 75
+They have rolled a 1
+Sue's new location is 3
 The category is Rock
-Rock Question 5
+Rock Question 0
 Answer was corrent!!!!
 Sue now has 2 Gold Coins.
 Chet is the current player
-They have rolled a 49
-Chet's new location is 115
+They have rolled a 1
+Chet's new location is 7
 The category is Rock
-Rock Question 6
+Rock Question 1
 Answer was corrent!!!!
 Chet now has 3 Gold Coins.
 Pat is the current player
-They have rolled a 49
-Pat's new location is 113
-The category is Rock
-Rock Question 7
+They have rolled a 1
+Pat's new location is 5
+The category is Science
+Science Question 1
 Answer was corrent!!!!
 Pat now has 3 Gold Coins.
 Sue is the current player
-They have rolled a 49
-Sue's new location is 112
-The category is Rock
-Rock Question 8
+They have rolled a 1
+Sue's new location is 4
+The category is Pop
+Pop Question 1
 Answer was corrent!!!!
 Sue now has 3 Gold Coins.
 Chet is the current player
-They have rolled a 51
-Chet's new location is 154
-The category is Rock
-Rock Question 9
+They have rolled a 3
+Chet's new location is 10
+The category is Sports
+Sports Question 3
 Answer was corrent!!!!
 Chet now has 4 Gold Coins.
 Pat is the current player
-They have rolled a 50
-Pat's new location is 151
+They have rolled a 2
+Pat's new location is 7
 The category is Rock
-Rock Question 10
+Rock Question 2
 Answer was corrent!!!!
 Pat now has 4 Gold Coins.
 Sue is the current player
-They have rolled a 49
-Sue's new location is 149
-The category is Rock
-Rock Question 11
+They have rolled a 1
+Sue's new location is 5
+The category is Science
+Science Question 2
 Answer was corrent!!!!
 Sue now has 4 Gold Coins.
 Chet is the current player
-They have rolled a 51
-Chet's new location is 193
-The category is Rock
-Rock Question 12
+They have rolled a 3
+Chet's new location is 1
+The category is Science
+Science Question 3
 Answer was corrent!!!!
 Chet now has 5 Gold Coins.
 Pat is the current player
-They have rolled a 53
-Pat's new location is 192
-The category is Rock
-Rock Question 13
-Answer was corrent!!!!
-Pat now has 5 Gold Coins.
+They have rolled a 5
+Pat's new location is 0
+The category is Pop
+Pop Question 2
+Question was incorrectly answered
+Pat was sent to the penalty box
 Sue is the current player
-They have rolled a 50
-Sue's new location is 187
+They have rolled a 2
+Sue's new location is 7
 The category is Rock
-Rock Question 14
-Answer was corrent!!!!
-Sue now has 5 Gold Coins.
+Rock Question 3
+Question was incorrectly answered
+Sue was sent to the penalty box
 Chet is the current player
-They have rolled a 52
-Chet's new location is 233
-The category is Rock
-Rock Question 15
+They have rolled a 4
+Chet's new location is 5
+The category is Science
+Science Question 4
 Answer was corrent!!!!
 Chet now has 6 Gold Coins.
