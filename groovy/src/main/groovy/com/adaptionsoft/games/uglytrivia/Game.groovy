@@ -81,13 +81,7 @@ public class Game {
 	}
 
 	public void wasCorrectlyAnswered() {
-		if (currentPlayer.inPenaltyBox) {
-			if (isGettingOutOfPenaltyBox) {
-				println "Answer was correct!!!!"
-				currentPlayer.awardCoin()
-    			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
-			}
-		} else {
+		if (!currentPlayer.inPenaltyBox || isGettingOutOfPenaltyBox) {
 			println "Answer was correct!!!!"
 			currentPlayer.awardCoin()
 			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
