@@ -22,4 +22,15 @@ class GameUnitTest extends GroovyTestCase {
 		interceptor.stop()
 		assert buffer.toString().startsWith('Answer was correct!!!!')
 	}
+
+	void testExitPenalty() {
+		def game = new Game()
+		game.add('Dummy')
+		game.roll(1)
+		game.wrongAnswer()
+		assert game.currentPlayer.inPenaltyBox
+		game.roll(1)
+		game.wasCorrectlyAnswered()
+		assert !game.currentPlayer.inPenaltyBox
+	}
 }

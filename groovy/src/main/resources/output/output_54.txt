@@ -92,7 +92,6 @@ Question was incorrectly answered
 Chet was sent to the penalty box
 Pat is the current player
 They have rolled a 5
-Pat is getting out of the penalty box
 Pat's new location is 9
 The category is Science
 Science Question 5
@@ -110,7 +109,9 @@ They have rolled a 4
 Chet is not getting out of the penalty box
 Pat is the current player
 They have rolled a 4
-Pat is not getting out of the penalty box
+Pat's new location is 1
+The category is Science
+Science Question 6
 Question was incorrectly answered
 Pat was sent to the penalty box
 Sue is the current player

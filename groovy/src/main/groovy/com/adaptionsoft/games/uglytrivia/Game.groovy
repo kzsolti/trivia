@@ -83,6 +83,7 @@ public class Game {
 	public void wasCorrectlyAnswered() {
 		if (!currentPlayer.inPenaltyBox || isGettingOutOfPenaltyBox) {
 			println "Answer was correct!!!!"
+			currentPlayer.inPenaltyBox = false
 			currentPlayer.awardCoin()
 			println "${currentPlayer.name} now has ${currentPlayer.purse} Gold Coins."
 		}
@@ -98,7 +99,7 @@ public class Game {
 		players.add(players.remove(0))
 	}
 
-	private Player getCurrentPlayer() {
+	public Player getCurrentPlayer() {
 		players[0]
 	}
 
