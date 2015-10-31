@@ -1,7 +1,5 @@
 
 package com.adaptionsoft.games.trivia.runner
-
-import java.util.Random
 import com.adaptionsoft.games.uglytrivia.Game
 
 public class GameRunner {
@@ -17,20 +15,34 @@ public class GameRunner {
 		aGame.add("Sue")
 		
 		Random rand = new Random()
-	
-	    boolean isFirstRound = true
-	    notAWinner = false
+
+		runGame(aGame, new RollProvider() {
+			@Override
+			int getFirstRoll() {
+				rand.nextInt(5) + 1
+			}
+
+			@Override
+			int getSecondRoll() {
+				rand.nextInt(9)
+			}
+		})
+	}
+
+	public static void runGame(Game aGame, RollProvider provider) {
+		boolean isFirstRound = true
+		notAWinner = false
 		while (isFirstRound || notAWinner) {
-			
-			aGame.roll(rand.nextInt(5) + 1)
-			
-			if (rand.nextInt(9) == 7) {
+
+			aGame.roll(provider.firstRoll)
+
+			if (provider.secondRoll == 7) {
 				notAWinner = aGame.wrongAnswer()
 			} else {
 				notAWinner = aGame.wasCorrectlyAnswered()
 			}
-			
+
 			isFirstRound = false
-		} 
+		}
 	}
 }
